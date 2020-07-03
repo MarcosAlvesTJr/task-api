@@ -15,6 +15,6 @@ export class AuthController {
   @Post('signup')
   @UsePipes(ValidationPipe)
   async signUp(@Body() authCredentials: AuthCredentialsDto): Promise<void> {
-    this.authService.singnUp(authCredentials);
+    return this.authService.singnUp(authCredentials);
   }
 }
